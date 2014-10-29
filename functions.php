@@ -1,9 +1,4 @@
 <?php
-define( 'WPCOMIDEAS_PATH',  get_theme_root() . '/wpideas/' );
-define( 'WPCOMIDEAS_URL', "/wp-content/themes/wpideas/" );
-define( 'WPCOMIDEAS_JS_PATH',  WPCOMIDEAS_PATH . 'js/' );
-define( 'WPCOMIDEAS_JS_URL', WPCOMIDEAS_URL . 'js/' );
-
 // WP.com version uses the Post Ratings plugin to vote on ideas.
 // require_once( WP_CONTENT_DIR . '/plugins/wp-postratings/wp-postratings.php' );
 
@@ -11,16 +6,10 @@ define( 'WPCOMIDEAS_JS_URL', WPCOMIDEAS_URL . 'js/' );
 * Loads the required JavaScript files.
 */
 function wpcomideas_load_scripts() {
-	if ( ! is_admin() ) {
-		// Live search
-		$livesearch_js = 'jquery.livesearch.js';
-		wp_enqueue_script( 'livesearch', WPCOMIDEAS_JS_URL . $livesearch_js, false, filemtime( WPCOMIDEAS_JS_PATH . $livesearch_js ) );
-
-		$wpcomideas_js = 'wpcomideas.js';
-		wp_enqueue_script( 'wpcomideas', WPCOMIDEAS_JS_URL . $wpcomideas_js, false, filemtime( WPCOMIDEAS_JS_PATH . $wpcomideas_js ) );
-	}
+	wp_enqueue_script( 'livesearch', get_stylesheet_directory_uri() . '/jquery.livesearch.js', false );
+	wp_enqueue_script( 'wpcomideas', get_stylesheet_directory_uri() . '.wpcomideas.js', false );
 }
-add_action( 'init', 'wpcomideas_load_scripts' );
+add_action( 'wp_enqueue_scripts', 'wpcomideas_load_scripts' );
 
 /**
 * Displays just the bookmarklet.
