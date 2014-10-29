@@ -12,6 +12,7 @@ body,
 #site-generator {
 	background: #fff;
 }
+
 #site-title,
 .entry-content,
 .entry-summary,
@@ -22,41 +23,51 @@ body,
 	margin: 0;
 	padding: 0;
 }
+
 #site-title a:hover,
 #site-title a:focus,
 #site-title a:active,
 a {
-	color: #21759B;
+	color: #21759b;
 }
+
 #site-description {
 	display: none;
 }
+
 #site-title {
 	font-family: "Lucida Grande", sans-sserif;
 }
+
 #site-title a {
 	font-size: 24px;
 	font-weight: normal;
 }
+
 #branding {
 	border-top: none;
 }
+
 #branding #searchform {
 	top: 0;
 	right: 2%;
 }
+
 #branding #s {
 	-moz-transition-duration: 0ms;
 	-moz-transition-property: width, background;
 	-moz-transition-timing-function: ease;
 	width: 196px;
 }
+
 #site-generator {
 	padding: 1em 0 0 0;
 }
+
 img#wpstats {
 	margin: 0;
 }
+
 
 
 /* =Menu
@@ -66,26 +77,30 @@ nav#access {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
+
 .menu {
 	margin: 0;
 	padding: 0;
 }
+
 .menu ul li {
 	display: inline;
 	margin: 0;
 	padding-right: .5em;
 }
+
 .menu ul li a {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 	border: none;
 	background: #21759b;
-	color: #d2ebf7
+	color: #d2ebf7;
 	font-size: 11px;
 	padding: 4px 8px;
 	text-decoration: none;
 }
+
 #access li:hover > a,
 #access a:focus,
 .menu ul li a:hover,
@@ -94,12 +109,15 @@ nav#access {
 	background: #d54e21;
 	color: #fc9;
 }
+
 #access {
 	margin-left: 10px;
 }
+
 #access a {
 	line-height: 2em;
 }
+
 
 
 /* =Footer Widgets
@@ -107,7 +125,7 @@ nav#access {
 #supplementary.three .widget-area {
 	margin-right: 1%;
 	width: 21.5%;
-	background: #FDFADC;
+	background: #fdfadc;
 	border: 1px solid #cc9;
 	padding: 1%;
 	-webkit-border-radius: 6px;
@@ -115,16 +133,20 @@ nav#access {
 	border-radius: 6px;
 	overflow: hidden;
 }
+
 #supplementary,#site-generator {
 	border-top: none;
 }
+
 #supplementary.three .widget-area + .widget-area + .widget-area {
 	margin-right: 1%;
 }
+
 #wp_tag_cloud,
 #tag_cloud {
 	line-height: 1.6em;
 }
+
 
 
 /* =Wide Single Posts
@@ -132,22 +154,27 @@ nav#access {
 .singular.page .hentry {
 	padding: 0;
 }
+
 .singular .entry-header,
 .singular .entry-content,
 .singular footer.entry-meta,
 .singular #comments-title {
 	width: 100%;
 }
+
 .singular #content,
 .left-sidebar.singular #content {
 	margin: 0px;
 }
+
 .singular .entry-meta .edit-link a {
 	left: -60px;
 }
+
 #comments #respond {
 	max-width: 100%;
 }
+
 
 /* =Shortcode
 -------------------------------------------------------------- */
@@ -155,6 +182,7 @@ nav#access {
 	list-style-type: none;
 	margin-left: 1em;
 }
+
 .comment-count {
 	font-weight: bold;
 	margin-left: -1em;
@@ -163,23 +191,28 @@ nav#access {
 	width: 1.5em;
 	text-align: right;
 }
+
 .textwidget ul li span.title {
 	display: block;
 	margin-left: 1.5em;
 }
 
+
 .alignleft {
 	float: left;
 }
+
 .alignright {
 	float: right;
 }
+
 
 /* Sticky */
 .sticky h2 {
 	background: #ccc;
 	padding: 10px;
 }
+
 
 /* self-clear floats */
 .group:after {
@@ -191,6 +224,7 @@ nav#access {
 }
 
 
+
 /* =Ratings
 -------------------------------------------------------------- */
 .post-ratings {
@@ -199,23 +233,29 @@ nav#access {
 }
 
 
+
 /* IE Hacks */
 *html #bubble {
 	display: none;
 }
+
 *html #bubble p {
 	display: none;
 }
+
 * html .group,
 * html #nav ul li a {
 	height: 1%;
 }
+
 *:first-child+html .group {
 	min-height: 1px;
 }
+
 * html #nav ul li a {
 	display: inline;
 }
+
 
 /* =Bookmarklet
 -------------------------------------------------------------- */
@@ -224,9 +264,11 @@ nav#access {
 	padding: 15px;
 }
 
+
 .bookmarklet h2 {
 	margin-bottom: 1em;
 }
+
 
 .bookmarklet #livesearch {
 	border: 1px solid #ccc;
@@ -235,6 +277,7 @@ nav#access {
 	font-size: 15px;
 	padding: 10px;
 }
+
 
 .bookmarklet textarea,
  .bookmarklet #post_title,
@@ -245,10 +288,12 @@ nav#access {
 	width: 300px;
 }
 
+
 #livesearch {
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
+
 
 #livesearch-results {
 	background: #fff;
@@ -265,21 +310,25 @@ nav#access {
 	height: 300px;
 }
 
+
 .bookmarklet p {
 	margin-bottom: .5em;
 }
 
+
 .livesearch-excerpt p {
 	font-size: 10px;
 }
+
 #livesearch-results h4 a {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 	border: none;
-	background: #21759B;
-	color: #D2EBF7;
+	background: #21759b;
+	color: #d2ebf7;
 	padding: 2px 8px;
 	text-decoration: none;
 	font-size: 10px;
 }
+

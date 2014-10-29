@@ -23,8 +23,6 @@ var WPCOM_Ideas = {
 
 	/**
 	* Pulls results for a set of terms and displays it udner the post tags box.
-	*
-	* @since IdeaPress 1.0
 	*/
 	live_search : function(term) {
 		this.livesearch_timer = setTimeout(function () {
