@@ -7,7 +7,7 @@
 */
 function wpcomideas_load_scripts() {
 	wp_enqueue_script( 'livesearch', get_stylesheet_directory_uri() . '/jquery.livesearch.js', false );
-	wp_enqueue_script( 'wpcomideas', get_stylesheet_directory_uri() . '.wpcomideas.js', false );
+	wp_enqueue_script( 'wpcomideas', get_stylesheet_directory_uri() . '/wpcomideas.js', false );
 }
 add_action( 'wp_enqueue_scripts', 'wpcomideas_load_scripts' );
 
