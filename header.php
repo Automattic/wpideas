@@ -112,7 +112,7 @@
 				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'wpideas' ); ?>"><?php _e( 'Skip to secondary content', 'wpideas' ); ?></a></div>
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				<div class="menu"><ul><li class="page_item"><a href="javascript:var d=document,w=window,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='http://wpcomideas.wordpress.com/?suggestion=bookmarklet',l=d.location,e=encodeURIComponent,u=f+'&amp;u='+e(l.href)+'&amp;t='+e(d.title)+'&amp;s='+e(s)+'&amp;v=4';a=function(){if(!w.open(u,'t','toolbar=0,resizable=1,scrollbars=1,status=1,width=740,height=470'))l.href=u;};if (/Firefox/.test(navigator.userAgent)) setTimeout(a, 0); else a();void(0)" title="bookmarklet">bookmarklet</a></li></ul></div>
+				<div class="menu"><ul><li class="page_item"><a href="javascript:var d=document,w=window,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='?suggestion=bookmarklet',l=d.location,e=encodeURIComponent,u=f+'&amp;u='+e(l.href)+'&amp;t='+e(d.title)+'&amp;s='+e(s)+'&amp;v=4';a=function(){if(!w.open(u,'t','toolbar=0,resizable=1,scrollbars=1,status=1,width=740,height=470'))l.href=u;};if (/Firefox/.test(navigator.userAgent)) setTimeout(a, 0); else a();void(0)" title="bookmarklet">bookmarklet</a></li></ul></div>
 			</nav><!-- #access -->
 	</header><!-- #branding -->
 

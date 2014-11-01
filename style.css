@@ -4,6 +4,8 @@ Version: 2.0
 Author: the WordPress team
 Description: WordPress Ideas theme to  track suggestions and feature requests. Forked from wpcomideas theme by Automattic.
 Template: twentyeleven
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 @import url("../twentyeleven/style.css");
@@ -280,7 +282,7 @@ nav#access {
 
 
 .bookmarklet textarea,
- .bookmarklet #post_title,
+.bookmarklet #post_title,
 .bookmarklet #post_content,
 .bookmarklet #post_tags {
 	border: 1px solid #ccc;
@@ -331,4 +333,3 @@ nav#access {
 	text-decoration: none;
 	font-size: 10px;
 }
-
