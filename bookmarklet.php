@@ -106,8 +106,8 @@ if ( empty( $_GET['flow'] ) ) { ?>
 		<p> <input type="text" id="post_title" name="post_title" value="<?php echo esc_attr($_POST['post_title']);?>" /> </p>
 
 		<p><label for="post_content"><strong>Description</strong></label></p>
-		<?php $content = ( empty($_POST['post_content'])) ? urldecode($_GET['s']) : $_POST['post_content'];?>
-		<p><textarea id="post_content" name="post_content"><?php echo $content;?></textarea></p>
+		<?php $content = ( empty( $_POST['post_content'] ) ) ? urldecode( $_GET['s'] ) : $_POST['post_content'];?>
+		<p><textarea id="post_content" name="post_content"><?php echo esc_textarea( $content );?></textarea></p>
 
 		<p class="postbox-categories">
 			<label for="postcategories"><strong><?php _e('Area', 'ideapress');?></strong></label> <br />
