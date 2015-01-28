@@ -42,17 +42,23 @@ function wpcomideas_query_vars($vars) {
 add_filter( 'query_vars',  'wpcomideas_query_vars' );
 
 /**
-* Edits the posts request query so that we can do a live search from the tags field.
-* @return string Final live search query.
-*/
-function wpcomideas_livesearch_query_where( $where ) {
+ * Edits the posts request query so that we can do a live search from the tags field.
+ *
+ * @return string Final live search query.
+ */
+function wpcomideas_livesearch_query_where() {
 	global $wpdb, $wpquery;
 
-	$terms = ( !empty( $_GET['livesearch']) ) ? $_GET['livesearch'] : '';
+	$terms = ( ! empty( $_GET['livesearch']) ) ? $_GET['livesearch'] : '';
 
 	$where .= " AND (";
 
+	if ( is_array( $terms ) ) {
+		$terms = implode( ' ', $terms );
+	}
+
 	foreach( explode( ' ', $terms ) as $term ) {
+		$term = $wpdb->esc_like( esc_sql( $term ) );
 		$where .= " post_title LIKE '%{$term}%' OR post_content LIKE '%{$term}%' OR ";
 	}
 
@@ -73,12 +79,12 @@ function wpcomideas_livesearch( $query ) {
 
 	$term = ( !empty( $query->query_vars['livesearch']) ) ? $query->query_vars['livesearch'] : '';
 
-	if ( !empty( $term ) ) {
+	if ( ! empty( $term ) ) {
 		$url = esc_url( $_GET['u'] );
 		$text = urlencode( $_GET['s'] );
 
-		add_filter( 'posts_where', "wpcomideas_livesearch_query_where", $term );
-		query_posts('');
+		add_filter( 'posts_where', 'wpcomideas_livesearch_query_where' );
+		query_posts( '' );
 
 		if ( have_posts() ) : ?>
 			<p> <?php _e("Please review the following related postings for possible duplicates."); ?> </p>
