@@ -58,7 +58,7 @@ function wpcomideas_livesearch_query_where() {
 	}
 
 	foreach( explode( ' ', $terms ) as $term ) {
-		$term = $wpdb->esc_like( esc_sql( $term ) );
+		$term = esc_sql( $wpdb->esc_like( $term ) );
 		$where .= " post_title LIKE '%{$term}%' OR post_content LIKE '%{$term}%' OR ";
 	}
 
